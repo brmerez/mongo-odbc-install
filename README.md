@@ -20,7 +20,7 @@
 
 - Em `Caminho do Driver` clique em `Escolher` e navegue até a pasta onde forma instalados os drivers
     - Segundo a instalação padrão do MacOS, os drivers devem estar instalados na pasta `/Library/MongoDB/ODBC/{número da versão}/`
-    - Nesta pasta haverão 2 arquivos: `libmdbodbca.so` e `libmdbodbcw.so`, escolheremos a segunda opção.
+    - Nesta pasta haverão 2 arquivos: `libmdbodbca.so` e `libmdbodbcw.so`, cada uma é referente à versão ANSI e Unicode.
 
 - Em seguida, precisaremos configurar a conexão na aba `DSN de Sistema` (ou `DSN de Usuário` no Windows, os passos são os mesmos)
 
@@ -62,9 +62,9 @@
 
 - Agora vamos rodar o seguinte comando no terminal:
 
-    `./mongosqld --mongo-uri=mongodb://192.168.0.125:27017` no MacOS/Linux
+    `./mongosqld --mongo-uri=mongodb://{endereço de IP do MongoDB}` no MacOS/Linux
 
-    `mongosqld.exe --mongo-uri=mongodb://192.168.0.125:27017` no Windows
+    `mongosqld.exe --mongo-uri=mongodb://{endereço de IP do MongoDB}` no Windows
 
 - Se tudo der certo, deverá aparecer no texto do terminal os nomes das bases do MongoDB, algo como `['cupons','prods', 'orders']`
 - __**IMPORTANTE:**__ **Não feche a janela do terminal rodando o comando `mongosqld` enquanto usa a conexão ODBC**
